@@ -1,0 +1,40 @@
+{
+	"bsonType": "object",
+	"description": "车手表",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"driver_name": {
+			"bsonType": "string",
+			"description": "车手名称"
+		},
+		"driver_team": {
+			"bsonType": "string",
+			"description": "所属车队"
+		},
+		"year": {
+			"bsonType": "int",
+			"description": "年份"
+		},
+		"schedule_id": {
+			"bsonType": "string",
+			"description": "分站日程分站id"
+		},
+		"fraction": {
+			"bsonType": "int",
+			"description": "分站所得积分"
+		},
+		"race_ranking": {
+			"bsonType": "int",
+			"description": "分站比赛排名"
+		}
+	}
+}
