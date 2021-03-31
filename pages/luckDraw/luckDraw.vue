@@ -1,42 +1,30 @@
 <template>
-	<view class="u-p-16">
-		<view class="u-page"><!-- 所有内容的容器 --></view>
-		<!-- 与包裹页面所有内容的元素u-page同级，且在它的下方 -->
-		<!-- <u-tabbar v-model="current" :list="list"></u-tabbar> -->
-	</view>
+  <view class="u-p-16">
+    <view class="u-page">
+      <button type="default">产于抽奖</button>
+    </view>
+    <!-- 与包裹页面所有内容的元素u-page同级，且在它的下方 -->
+    <u-tabbar v-model="current" :list="tabbar"></u-tabbar>
+  </view>
 </template>
 
 <script>
-export default {
-	data() {
-		return {
-			list: [
-				{
-					iconPath: 'home',
-					selectedIconPath: 'home-fill',
-					text: '积分榜',
-					customIcon: false,
-					pagePath: '/pages/index/index'
-				},
-				{
-					iconPath: 'photo',
-					selectedIconPath: 'photo-fill',
-					text: '竞猜中心',
-					customIcon: false,
-					pagePath: '/pages/luckDraw/luckDraw'
-				},
-				{
-					iconPath: 'account',
-					selectedIconPath: 'account-fill',
-					text: '个人中心',
-					customIcon: false,
-					pagePath: '/pages/center/index'
-				}
-			],
-			current: 1
-		};
-	}
-};
+  import {
+    mapGetters
+  } from 'vuex'
+
+  export default {
+    name: 'LuckDraw',
+    data() {
+      return {
+        current: 1,
+      }
+    },
+    computed: {
+      ...mapGetters(['tabbar', 'token']),
+    },
+    methods: {},
+  }
 </script>
 
 <style lang="scss" scoped></style>

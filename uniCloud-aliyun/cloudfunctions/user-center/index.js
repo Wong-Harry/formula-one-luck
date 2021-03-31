@@ -1,13 +1,9 @@
 'use strict'
 const uniID = require('uni-id')
 
-exports.main = async function(event, context) {
+exports.main = async function (event, context) {
   // console.log(event)
-  const {
-    action,
-    params = {},
-    uniIdToken
-  } = event
+  const { action, params = {}, uniIdToken } = event
   let res = {} // 最后返回信息
 
   // 校验token
@@ -47,17 +43,13 @@ exports.main = async function(event, context) {
   // serverless处理
   switch (action) {
     case 'loginByWeixin': {
-      const {
-        code
-      } = params
+      const { code } = params
       res = await uniID.loginByWeixin({
         code,
       })
       break
     }
     case 'setUserInfo': {
-      // const { code } = params
-      console.log('params', params)
       res = await uniID.updateUser(params)
       break
     }

@@ -1,6 +1,6 @@
 {
   "bsonType": "object",
-  "description": "车手表",
+  "description": "车队表",
   "required": [],
   "permission": {
     "read": false,
@@ -12,21 +12,21 @@
     "_id": {
       "description": "ID，系统自动生成"
     },
-    "driver_name": {
+    "team_name": {
       "bsonType": "string",
-      "description": "车手名称"
+      "description": "车对名称"
     },
-    "driver_team_id": {
+    "team_logo": {
       "bsonType": "string",
-      "description": "所属车队id"
+      "description": "车队logo"
     },
     "year": {
       "bsonType": "date",
-      "description": "年份"
+      "description": "车队年份"
     },
-    "schedule_id": {
-      "bsonType": "string",
-      "description": "参与分站id"
+    "team_dirver_id": {
+      "bsonType": "array",
+      "description": "车队成员id"
     }
   }
 }

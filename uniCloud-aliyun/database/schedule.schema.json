@@ -12,13 +12,21 @@
     "_id": {
       "description": "ID，系统自动生成"
     },
-    "schedule_name": {
+    "race_name": {
       "bsonType": "string",
       "description": "分站名称"
     },
-    "city": {
+    "country": {
       "bsonType": "string",
-      "description": "分站所属国家"
+      "description": "国家名称"
+    },
+    "start_time": {
+      "bsonType": "date",
+      "description": "比赛开始时间"
+    },
+    "end_time": {
+      "bsonType": "date",
+      "description": "比赛结束时间"
     }
   }
 }
