@@ -11,14 +11,14 @@ const state = {
     {
       iconPath: 'photo',
       selectedIconPath: 'photo-fill',
-      text: '竞猜中心',
+      text: '竞猜',
       customIcon: false,
       pagePath: '/pages/luckDraw/luckDraw',
     },
     {
       iconPath: 'account',
       selectedIconPath: 'account-fill',
-      text: '个人中心',
+      text: '我',
       customIcon: false,
       pagePath: '/pages/center/index',
     },

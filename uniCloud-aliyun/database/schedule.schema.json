@@ -1,7 +1,7 @@
 {
   "bsonType": "object",
   "required": [],
-  "description": "赛程表",
+  "description": "分站日程表",
   "permission": {
     "read": false,
     "create": false,
@@ -27,6 +27,10 @@
     "end_time": {
       "bsonType": "date",
       "description": "比赛结束时间"
+    },
+    "year": {
+      "bsonType": "string",
+      "description": "赛季年份"
     }
   }
 }

@@ -1,29 +1,41 @@
 // 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
 {
-	"bsonType": "object",
-	"required": ["schedule_id", "ranking", "pts"],
-	"description": "每场分站设置的竞猜积分表",
-	"permission": {
-		"read": false,
-		"create": false,
-		"update": false,
-		"delete": false
-	},
-	"properties": {
-		"_id": {
-			"description": "ID，系统自动生成"
-		},
-		"schedule_id": {
-			"bsonType": "string",
-			"description": "分站id"
-		},
-		"ranking": {
-			"bsonType": "int",
-			"description": "名次"
-		},
-		"pts": {
-			"bsonType": "int",
-			"description": "积分"
-		}
-	}
+  "bsonType": "object",
+  "description": "每场分站设置的竞猜积分表",
+  "required": [],
+  "permission": {
+    "read": false,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成"
+    },
+    "schedule_id": {
+      "bsonType": "string",
+      "description": "分站id"
+    },
+    "schedule_name": {
+      "bsonType": "string",
+      "description": "分站名称"
+    },
+    "guess_title": {
+      "bsonType": "string",
+      "description": "竞猜题目"
+    },
+    "guess_type": {
+      "enum": ["真假", "选择", "选择范围"],
+      "description": "题目规则"
+    },
+    "guess_reward": {
+      "bsonType": "int",
+      "description": "竞猜奖励"
+    },
+    "create_time": {
+      "bsonType": "date",
+      "description": "创建时间"
+    }
+  }
 }

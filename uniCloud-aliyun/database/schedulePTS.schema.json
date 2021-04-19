@@ -1,7 +1,7 @@
 {
   "bsonType": "object",
   "required": [],
-  "description": "赛程表",
+  "description": "分站结果积分表",
   "permission": {
     "read": false,
     "create": false,

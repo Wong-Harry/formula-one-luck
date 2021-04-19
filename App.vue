@@ -35,6 +35,7 @@
       .then(({
         result
       }) => {
+        console.log('result', result);
         if (result.code === 0) {
           uni.setStorageSync('userInfo', result.userInfo)
           uni.setStorageSync('uni_id_token', result.token)
@@ -59,7 +60,7 @@
   export default {
     onLaunch: function() {
       console.log('App Launch')
-      // wxLogin()
+      wxLogin()
     },
     onShow: function() {
       console.log('App Show')

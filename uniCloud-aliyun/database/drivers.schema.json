@@ -21,8 +21,8 @@
       "description": "所属车队id"
     },
     "year": {
-      "bsonType": "date",
-      "description": "年份"
+      "bsonType": "string",
+      "description": "赛季年份"
     },
     "schedule_id": {
       "bsonType": "string",
